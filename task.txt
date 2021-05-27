@@ -1,0 +1,336 @@
+20:30:07: Executing tasks ':classes :testClasses :framework-bom:assemble :integration-tests:classes :integration-tests:testClasses :kotlin-coroutines:classes :kotlin-coroutines:testClasses :integration-tests:testFixturesClasses :kotlin-coroutines:testFixturesClasses :spring-aspects:classes :spring-aspects:testClasses :spring-aspects:testFixturesClasses :spring-aop:classes :spring-aop:testClasses :spring-aop:testFixturesClasses :spring-beans:classes :spring-beans:testClasses :spring-context:classes :spring-context:testClasses :spring-context-indexer:classes :spring-context-support:classes :spring-context-support:testClasses :spring-beans:testFixturesClasses :spring-context-indexer:testFixturesClasses :spring-context-indexer:testClasses :spring-context-support:testFixturesClasses :spring-core:classes :spring-core:testClasses :spring-core:testFixturesClasses :spring-expression:classes :spring-expression:testClasses :spring-instrument:classes :spring-instrument:testClasses :spring-expression:testFixturesClasses :spring-jcl:classes :spring-jcl:testClasses :spring-instrument:testFixturesClasses :spring-context:testFixturesClasses :spring-jdbc:classes :spring-jdbc:testClasses :spring-jcl:testFixturesClasses :spring-jms:classes :spring-jms:testClasses :spring-jdbc:testFixturesClasses :spring-jms:testFixturesClasses :spring-messaging:classes :spring-messaging:testClasses :spring-orm:classes :spring-orm:testFixturesClasses :spring-oxm:classes :spring-oxm:testClasses :spring-orm:testClasses :spring-messaging:testFixturesClasses :spring-test:classes :spring-test:testClasses :spring-oxm:testFixturesClasses :spring-tx:classes :spring-tx:testClasses :spring-test:testFixturesClasses :spring-tx:testFixturesClasses :spring-web:classes :spring-web:testClasses :spring-webflux:classes :spring-webflux:testClasses :spring-web:testFixturesClasses :spring-webflux:testFixturesClasses :spring-webmvc:classes :spring-websocket:classes :spring-websocket:testClasses :spring-webmvc:testFixturesClasses :spring-webmvc:testClasses :spring-websocket:testFixturesClasses :testFixturesClasses'...
+
+> Task :buildSrc:compileJava UP-TO-DATE
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:pluginDescriptors UP-TO-DATE
+> Task :buildSrc:processResources UP-TO-DATE
+> Task :buildSrc:classes UP-TO-DATE
+> Task :buildSrc:jar UP-TO-DATE
+> Task :buildSrc:assemble UP-TO-DATE
+> Task :buildSrc:pluginUnderTestMetadata UP-TO-DATE
+> Task :buildSrc:compileTestJava NO-SOURCE
+> Task :buildSrc:compileTestGroovy NO-SOURCE
+> Task :buildSrc:processTestResources NO-SOURCE
+> Task :buildSrc:testClasses UP-TO-DATE
+> Task :buildSrc:test NO-SOURCE
+> Task :buildSrc:validateTaskProperties UP-TO-DATE
+> Task :buildSrc:check UP-TO-DATE
+> Task :buildSrc:build UP-TO-DATE
+Configuration on demand is an incubating feature.
+> Task :framework-bom:assemble UP-TO-DATE
+> Task :compileKotlin NO-SOURCE
+> Task :integration-tests:compileJava NO-SOURCE
+> Task :compileJava NO-SOURCE
+> Task :integration-tests:processResources NO-SOURCE
+> Task :integration-tests:classes UP-TO-DATE
+> Task :spring-core:cglibRepackJar UP-TO-DATE
+> Task :compileGroovy NO-SOURCE
+> Task :spring-expression:processResources UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :spring-core:objenesisRepackJar UP-TO-DATE
+> Task :spring-aop:processResources UP-TO-DATE
+> Task :spring-core:processResources UP-TO-DATE
+> Task :spring-beans:processResources UP-TO-DATE
+> Task :inspectClassesForKotlinIC
+> Task :integration-tests:jar
+> Task :integration-tests:compileTestFixturesJava NO-SOURCE
+> Task :spring-oxm:processResources UP-TO-DATE
+> Task :spring-context:processResources UP-TO-DATE
+> Task :spring-orm:processResources NO-SOURCE
+> Task :spring-instrument:compileJava UP-TO-DATE
+> Task :spring-instrument:processResources NO-SOURCE
+> Task :spring-instrument:classes UP-TO-DATE
+> Task :jar
+> Task :spring-instrument:jar UP-TO-DATE
+> Task :spring-context-support:processResources
+> Task :compileTestFixturesKotlin NO-SOURCE
+> Task :compileTestFixturesJava NO-SOURCE
+> Task :compileTestFixturesGroovy NO-SOURCE
+> Task :spring-jdbc:processResources
+> Task :processTestFixturesResources NO-SOURCE
+> Task :testFixturesClasses UP-TO-DATE
+> Task :spring-messaging:processResources NO-SOURCE
+> Task :spring-webflux:processResources
+> Task :testFixturesJar
+> Task :spring-jcl:compileJava UP-TO-DATE
+> Task :spring-tx:processResources
+> Task :compileTestKotlin NO-SOURCE
+> Task :spring-jcl:processResources UP-TO-DATE
+> Task :spring-jcl:classes UP-TO-DATE
+> Task :spring-web:processResources
+> Task :spring-jcl:jar UP-TO-DATE
+> Task :spring-beans:processTestFixturesResources NO-SOURCE
+> Task :compileTestJava NO-SOURCE
+> Task :spring-test:processResources
+> Task :compileTestGroovy NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :spring-core:processTestFixturesResources NO-SOURCE
+> Task :spring-context:processTestFixturesResources NO-SOURCE
+> Task :spring-websocket:processResources
+> Task :spring-webmvc:processResources
+> Task :spring-aspects:processResources
+> Task :kotlin-coroutines:compileKotlin UP-TO-DATE
+> Task :kotlin-coroutines:compileJava NO-SOURCE
+> Task :spring-context-indexer:compileJava FROM-CACHE
+> Task :spring-context-indexer:processResources
+> Task :spring-context-indexer:classes
+> Task :integration-tests:processTestResources
+> Task :integration-tests:processTestFixturesResources NO-SOURCE
+> Task :integration-tests:testFixturesClasses UP-TO-DATE
+> Task :spring-aspects:processTestResources
+> Task :spring-aspects:processTestFixturesResources NO-SOURCE
+> Task :spring-aop:processTestResources
+> Task :spring-aop:processTestFixturesResources NO-SOURCE
+> Task :spring-instrument:compileTestFixturesJava NO-SOURCE
+> Task :spring-expression:processTestResources
+> Task :spring-instrument:compileTestJava NO-SOURCE
+> Task :spring-expression:processTestFixturesResources NO-SOURCE
+> Task :spring-instrument:processTestResources NO-SOURCE
+> Task :spring-instrument:testClasses UP-TO-DATE
+> Task :spring-jcl:compileTestFixturesJava NO-SOURCE
+> Task :spring-instrument:processTestFixturesResources NO-SOURCE
+> Task :spring-instrument:testFixturesClasses UP-TO-DATE
+> Task :spring-jcl:compileTestJava NO-SOURCE
+> Task :spring-context-support:processTestResources
+> Task :spring-context-support:processTestFixturesResources NO-SOURCE
+> Task :spring-jms:processResources
+> Task :spring-core:processTestResources
+> Task :spring-jms:processTestResources
+> Task :spring-jms:processTestFixturesResources NO-SOURCE
+> Task :spring-orm:processTestFixturesResources NO-SOURCE
+> Task :spring-messaging:processTestResources
+> Task :spring-oxm:genJaxb UP-TO-DATE
+> Task :spring-oxm:processTestResources
+> Task :spring-messaging:processTestFixturesResources NO-SOURCE
+> Task :spring-jcl:processTestResources NO-SOURCE
+> Task :spring-jcl:testClasses UP-TO-DATE
+> Task :spring-jcl:processTestFixturesResources NO-SOURCE
+> Task :spring-jcl:testFixturesClasses UP-TO-DATE
+> Task :spring-oxm:processTestFixturesResources NO-SOURCE
+> Task :spring-tx:processTestResources
+> Task :spring-tx:processTestFixturesResources NO-SOURCE
+> Task :spring-beans:processTestResources
+> Task :spring-orm:processTestResources
+> Task :spring-websocket:processTestResources
+> Task :spring-web:processTestResources
+> Task :spring-web:processTestFixturesResources
+> Task :spring-jdbc:processTestResources
+> Task :spring-jdbc:processTestFixturesResources NO-SOURCE
+> Task :kotlin-coroutines:processResources NO-SOURCE
+> Task :kotlin-coroutines:classes UP-TO-DATE
+> Task :kotlin-coroutines:inspectClassesForKotlinIC UP-TO-DATE
+> Task :kotlin-coroutines:jar UP-TO-DATE
+> Task :kotlin-coroutines:compileTestFixturesKotlin NO-SOURCE
+> Task :spring-webmvc:processTestFixturesResources NO-SOURCE
+> Task :spring-websocket:processTestFixturesResources NO-SOURCE
+> Task :kotlin-coroutines:compileTestFixturesJava NO-SOURCE
+> Task :kotlin-coroutines:compileTestKotlin NO-SOURCE
+> Task :kotlin-coroutines:compileTestJava NO-SOURCE
+> Task :kotlin-coroutines:processTestResources NO-SOURCE
+> Task :kotlin-coroutines:testClasses UP-TO-DATE
+> Task :kotlin-coroutines:processTestFixturesResources NO-SOURCE
+> Task :kotlin-coroutines:testFixturesClasses UP-TO-DATE
+> Task :spring-context-indexer:jar
+> Task :spring-test:processTestResources
+> Task :spring-test:processTestFixturesResources NO-SOURCE
+> Task :spring-webflux:processTestResources
+> Task :spring-context-indexer:compileTestFixturesJava NO-SOURCE
+> Task :spring-context-indexer:processTestFixturesResources NO-SOURCE
+> Task :spring-context-indexer:testFixturesClasses UP-TO-DATE
+> Task :spring-webflux:processTestFixturesResources NO-SOURCE
+> Task :spring-context-indexer:processTestResources NO-SOURCE
+> Task :spring-core:compileKotlin UP-TO-DATE
+> Task :spring-core:compileJava UP-TO-DATE
+> Task :spring-core:classes UP-TO-DATE
+> Task :spring-core:inspectClassesForKotlinIC UP-TO-DATE
+> Task :spring-core:jar UP-TO-DATE
+> Task :spring-expression:compileKotlin UP-TO-DATE
+> Task :spring-expression:compileJava UP-TO-DATE
+> Task :spring-expression:classes UP-TO-DATE
+> Task :spring-expression:inspectClassesForKotlinIC UP-TO-DATE
+> Task :spring-expression:jar UP-TO-DATE
+> Task :spring-expression:compileTestFixturesKotlin NO-SOURCE
+> Task :spring-core:compileTestFixturesKotlin UP-TO-DATE
+> Task :spring-expression:compileTestFixturesJava NO-SOURCE
+> Task :spring-expression:testFixturesClasses UP-TO-DATE
+> Task :spring-core:compileTestFixturesJava UP-TO-DATE
+> Task :spring-core:testFixturesClasses UP-TO-DATE
+> Task :spring-beans:compileGroovy UP-TO-DATE
+> Task :spring-beans:compileKotlin UP-TO-DATE
+> Task :spring-beans:compileJava NO-SOURCE
+> Task :spring-beans:classes UP-TO-DATE
+> Task :spring-beans:inspectClassesForKotlinIC UP-TO-DATE
+> Task :spring-beans:jar UP-TO-DATE
+> Task :spring-core:testFixturesJar
+> Task :spring-oxm:compileJava UP-TO-DATE
+> Task :spring-oxm:classes UP-TO-DATE
+> Task :spring-oxm:jar UP-TO-DATE
+> Task :spring-oxm:compileTestFixturesJava NO-SOURCE
+> Task :spring-oxm:testFixturesClasses UP-TO-DATE
+> Task :spring-beans:compileTestFixturesKotlin FROM-CACHE
+> Task :spring-webmvc:processTestResources
+> Task :spring-context:processTestResources
+> Task :spring-beans:compileTestFixturesJava FROM-CACHE
+> Task :spring-beans:compileTestFixturesGroovy NO-SOURCE
+> Task :spring-beans:testFixturesClasses UP-TO-DATE
+> Task :spring-core:compileTestKotlin UP-TO-DATE
+> Task :spring-aop:compileJava UP-TO-DATE
+> Task :spring-aop:classes UP-TO-DATE
+> Task :spring-expression:compileTestKotlin FROM-CACHE
+> Task :spring-aop:jar UP-TO-DATE
+> Task :spring-aop:compileTestFixturesJava FROM-CACHE
+> Task :spring-beans:testFixturesJar
+> Task :spring-core:compileTestJava UP-TO-DATE
+> Task :spring-core:testClasses
+> Task :spring-context:compileKotlin UP-TO-DATE
+> Task :spring-expression:compileTestJava FROM-CACHE
+> Task :spring-beans:compileTestKotlin FROM-CACHE
+> Task :spring-expression:testClasses
+> Task :spring-context:compileJava UP-TO-DATE
+> Task :spring-context:compileGroovy NO-SOURCE
+> Task :spring-context:classes UP-TO-DATE
+> Task :spring-context:inspectClassesForKotlinIC UP-TO-DATE
+> Task :spring-context:jar UP-TO-DATE
+> Task :spring-aop:compileTestJava FROM-CACHE
+> Task :spring-aop:testClasses
+> Task :spring-aop:testFixturesClasses UP-TO-DATE
+> Task :spring-aop:testFixturesJar
+> Task :spring-context:compileTestFixturesKotlin FROM-CACHE
+> Task :spring-oxm:compileTestJava UP-TO-DATE
+> Task :spring-oxm:testClasses
+> Task :spring-context-indexer:compileTestJava FROM-CACHE
+> Task :spring-context-indexer:testClasses UP-TO-DATE
+> Task :spring-tx:compileKotlin FROM-CACHE
+> Task :spring-context:compileTestFixturesJava FROM-CACHE
+> Task :spring-context:compileTestFixturesGroovy NO-SOURCE
+> Task :spring-context:testFixturesClasses UP-TO-DATE
+> Task :spring-context:testFixturesJar
+> Task :spring-messaging:compileKotlin FROM-CACHE
+> Task :spring-tx:compileJava FROM-CACHE
+> Task :spring-tx:classes
+> Task :spring-beans:compileTestJava FROM-CACHE
+> Task :spring-beans:compileTestGroovy NO-SOURCE
+> Task :spring-beans:testClasses
+> Task :spring-web:compileKotlin FROM-CACHE
+> Task :spring-tx:inspectClassesForKotlinIC
+> Task :spring-messaging:compileJava FROM-CACHE
+> Task :spring-messaging:classes UP-TO-DATE
+> Task :spring-messaging:inspectClassesForKotlinIC
+> Task :spring-tx:jar
+> Task :spring-tx:compileTestFixturesKotlin FROM-CACHE
+> Task :spring-context:compileTestKotlin FROM-CACHE
+> Task :spring-jdbc:compileKotlin FROM-CACHE
+> Task :spring-tx:compileTestFixturesJava FROM-CACHE
+> Task :spring-web:compileJava FROM-CACHE
+> Task :spring-web:classes
+> Task :spring-messaging:jar
+> Task :spring-messaging:compileTestFixturesKotlin NO-SOURCE
+> Task :spring-messaging:compileTestFixturesJava NO-SOURCE
+> Task :spring-web:inspectClassesForKotlinIC
+> Task :spring-tx:compileTestKotlin FROM-CACHE
+> Task :spring-jdbc:compileJava FROM-CACHE
+> Task :spring-jdbc:classes
+> Task :spring-jdbc:inspectClassesForKotlinIC
+> Task :spring-jms:compileJava FROM-CACHE
+> Task :spring-jms:classes
+> Task :spring-jms:jar
+> Task :spring-jms:compileTestFixturesJava NO-SOURCE
+> Task :spring-jdbc:jar
+> Task :spring-jdbc:compileTestFixturesKotlin NO-SOURCE
+> Task :spring-jdbc:compileTestFixturesJava NO-SOURCE
+> Task :spring-messaging:compileTestKotlin FROM-CACHE
+> Task :spring-context-support:compileJava FROM-CACHE
+> Task :spring-context-support:classes
+> Task :spring-jdbc:compileTestKotlin FROM-CACHE
+> Task :spring-tx:compileTestJava FROM-CACHE
+> Task :spring-tx:testClasses
+> Task :spring-tx:testFixturesClasses UP-TO-DATE
+> Task :spring-jms:compileTestJava FROM-CACHE
+> Task :spring-jms:testClasses
+> Task :spring-jms:testFixturesClasses UP-TO-DATE
+> Task :spring-context-support:jar
+> Task :spring-context-support:compileTestFixturesJava FROM-CACHE
+> Task :spring-messaging:compileTestJava FROM-CACHE
+> Task :spring-messaging:testClasses
+> Task :spring-messaging:testFixturesClasses UP-TO-DATE
+> Task :spring-jdbc:compileTestJava FROM-CACHE
+> Task :spring-jdbc:testClasses
+> Task :spring-jdbc:testFixturesClasses UP-TO-DATE
+> Task :spring-web:jar
+> Task :spring-context-support:compileTestJava FROM-CACHE
+> Task :spring-context-support:testClasses
+> Task :spring-context-support:testFixturesClasses UP-TO-DATE
+> Task :spring-web:compileTestFixturesKotlin FROM-CACHE
+> Task :spring-web:compileTestFixturesJava FROM-CACHE
+> Task :spring-orm:compileJava FROM-CACHE
+> Task :spring-orm:classes UP-TO-DATE
+> Task :spring-orm:jar
+> Task :spring-aspects:compileJava NO-SOURCE
+> Task :spring-orm:compileTestFixturesJava NO-SOURCE
+> Task :spring-orm:testFixturesClasses UP-TO-DATE
+> Task :spring-webmvc:compileKotlin FROM-CACHE
+> Task :spring-aspects:compileAspectj FROM-CACHE
+> Task :spring-aspects:classes
+> Task :spring-orm:compileTestJava FROM-CACHE
+> Task :spring-orm:testClasses
+> Task :spring-context:compileTestJava FROM-CACHE
+> Task :spring-web:compileTestKotlin FROM-CACHE
+> Task :spring-webflux:compileKotlin FROM-CACHE
+> Task :spring-aspects:jar
+> Task :spring-aspects:compileTestFixturesJava NO-SOURCE
+> Task :spring-aspects:compileTestFixturesAspectj NO-SOURCE
+> Task :spring-aspects:testFixturesClasses UP-TO-DATE
+> Task :spring-webmvc:compileJava FROM-CACHE
+> Task :spring-webmvc:classes
+> Task :spring-webmvc:inspectClassesForKotlinIC
+> Task :spring-webflux:compileJava FROM-CACHE
+> Task :spring-webflux:classes
+> Task :spring-webflux:inspectClassesForKotlinIC
+> Task :spring-webmvc:jar
+> Task :spring-webmvc:compileTestFixturesKotlin NO-SOURCE
+> Task :spring-webmvc:compileTestFixturesJava NO-SOURCE
+> Task :spring-webmvc:testFixturesClasses UP-TO-DATE
+> Task :spring-webflux:jar
+> Task :spring-webflux:compileTestFixturesKotlin NO-SOURCE
+> Task :spring-webflux:compileTestFixturesJava NO-SOURCE
+> Task :spring-web:compileTestJava FROM-CACHE
+> Task :spring-web:testClasses
+> Task :spring-web:testFixturesClasses
+> Task :spring-webmvc:compileTestKotlin FROM-CACHE
+> Task :spring-websocket:compileJava FROM-CACHE
+> Task :spring-websocket:classes
+> Task :spring-websocket:jar
+> Task :spring-websocket:compileTestFixturesJava NO-SOURCE
+> Task :spring-webflux:compileTestKotlin FROM-CACHE
+> Task :spring-context:compileTestGroovy FROM-CACHE
+> Task :spring-context:testClasses
+> Task :spring-webmvc:compileTestJava FROM-CACHE
+> Task :spring-webmvc:testClasses
+> Task :spring-test:compileKotlin FROM-CACHE
+> Task :spring-websocket:compileTestJava FROM-CACHE
+> Task :spring-websocket:testClasses
+> Task :spring-websocket:testFixturesClasses UP-TO-DATE
+> Task :spring-test:compileJava FROM-CACHE
+> Task :spring-test:classes
+> Task :spring-test:inspectClassesForKotlinIC
+> Task :spring-webflux:compileTestJava FROM-CACHE
+> Task :spring-webflux:testClasses
+> Task :spring-webflux:testFixturesClasses UP-TO-DATE
+> Task :spring-test:jar
+> Task :spring-aspects:compileTestJava NO-SOURCE
+> Task :spring-test:compileTestFixturesKotlin NO-SOURCE
+> Task :spring-test:compileTestFixturesJava NO-SOURCE
+> Task :spring-aspects:compileTestAspectj FROM-CACHE
+> Task :spring-aspects:testClasses
+> Task :integration-tests:compileTestJava FROM-CACHE
+> Task :integration-tests:testClasses
+> Task :spring-test:compileTestKotlin FROM-CACHE
+> Task :spring-test:compileTestJava FROM-CACHE
+> Task :spring-test:testClasses
+> Task :spring-test:testFixturesClasses UP-TO-DATE
+
+BUILD SUCCESSFUL in 23s
+160 actionable tasks: 59 executed, 59 from cache, 42 up-to-date
+20:30:31: Tasks execution finished ':classes :testClasses :framework-bom:assemble :integration-tests:classes :integration-tests:testClasses :kotlin-coroutines:classes :kotlin-coroutines:testClasses :integration-tests:testFixturesClasses :kotlin-coroutines:testFixturesClasses :spring-aspects:classes :spring-aspects:testClasses :spring-aspects:testFixturesClasses :spring-aop:classes :spring-aop:testClasses :spring-aop:testFixturesClasses :spring-beans:classes :spring-beans:testClasses :spring-context:classes :spring-context:testClasses :spring-context-indexer:classes :spring-context-support:classes :spring-context-support:testClasses :spring-beans:testFixturesClasses :spring-context-indexer:testFixturesClasses :spring-context-indexer:testClasses :spring-context-support:testFixturesClasses :spring-core:classes :spring-core:testClasses :spring-core:testFixturesClasses :spring-expression:classes :spring-expression:testClasses :spring-instrument:classes :spring-instrument:testClasses :spring-expression:testFixturesClasses :spring-jcl:classes :spring-jcl:testClasses :spring-instrument:testFixturesClasses :spring-context:testFixturesClasses :spring-jdbc:classes :spring-jdbc:testClasses :spring-jcl:testFixturesClasses :spring-jms:classes :spring-jms:testClasses :spring-jdbc:testFixturesClasses :spring-jms:testFixturesClasses :spring-messaging:classes :spring-messaging:testClasses :spring-orm:classes :spring-orm:testFixturesClasses :spring-oxm:classes :spring-oxm:testClasses :spring-orm:testClasses :spring-messaging:testFixturesClasses :spring-test:classes :spring-test:testClasses :spring-oxm:testFixturesClasses :spring-tx:classes :spring-tx:testClasses :spring-test:testFixturesClasses :spring-tx:testFixturesClasses :spring-web:classes :spring-web:testClasses :spring-webflux:classes :spring-webflux:testClasses :spring-web:testFixturesClasses :spring-webflux:testFixturesClasses :spring-webmvc:classes :spring-websocket:classes :spring-websocket:testClasses :spring-webmvc:testFixturesClasses :spring-webmvc:testClasses :spring-websocket:testFixturesClasses :testFixturesClasses'.
