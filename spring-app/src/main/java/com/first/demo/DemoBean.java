@@ -1,4 +1,4 @@
-package com.first;
+package com.first.demo;
 
 import org.springframework.stereotype.Repository;
 

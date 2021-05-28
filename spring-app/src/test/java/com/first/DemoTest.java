@@ -1,5 +1,7 @@
 package com.first;
 
+import com.first.demo.DemoBean;
+import com.first.demo.DemoConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class DemoTest {
