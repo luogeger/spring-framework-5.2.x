@@ -299,6 +299,7 @@ public class PathMatchingResourcePatternResolver implements ResourcePatternResol
 			}
 			else {
 				// a single resource with the given name
+				//  org.springframework.core.io.DefaultResourceLoader.getResource
 				return new Resource[] {getResourceLoader().getResource(locationPattern)};
 			}
 		}
