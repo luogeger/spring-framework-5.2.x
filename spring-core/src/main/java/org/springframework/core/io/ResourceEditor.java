@@ -92,7 +92,11 @@ public class ResourceEditor extends PropertyEditorSupport {
 		this.ignoreUnresolvablePlaceholders = ignoreUnresolvablePlaceholders;
 	}
 
-
+	/**
+	 * 通过解析给定的字符串设置属性值。如果字符串格式错误或此类属性无法表示为文本，则可能会引发 java.lang.IllegalArgumentException。
+	 *
+	 * @param text
+	 */
 	@Override
 	public void setAsText(String text) {
 		if (StringUtils.hasText(text)) {

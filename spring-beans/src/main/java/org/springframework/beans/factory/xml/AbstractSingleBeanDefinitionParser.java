@@ -65,26 +65,34 @@ public abstract class AbstractSingleBeanDefinitionParser extends AbstractBeanDef
 		if (parentName != null) {
 			builder.getRawBeanDefinition().setParentName(parentName);
 		}
+
+		//  获取自定义标签中的class，调用自定义解析器
 		Class<?> beanClass = getBeanClass(element);
 		if (beanClass != null) {
+			//  getBeanClass方法
 			builder.getRawBeanDefinition().setBeanClass(beanClass);
 		}
 		else {
+			//  getBeanClassName方法
 			String beanClassName = getBeanClassName(element);
 			if (beanClassName != null) {
 				builder.getRawBeanDefinition().setBeanClassName(beanClassName);
 			}
 		}
+
 		builder.getRawBeanDefinition().setSource(parserContext.extractSource(element));
 		BeanDefinition containingBd = parserContext.getContainingBeanDefinition();
 		if (containingBd != null) {
-			// Inner bean definition must receive same scope as containing bean.
+			// Inner bean definition must receive same scope as containing bean. 内部 bean 定义必须接收与包含 bean 相同的范围。
+			//  存在父类，则使用父类的scope属性
 			builder.setScope(containingBd.getScope());
 		}
 		if (parserContext.isDefaultLazyInit()) {
 			// Default-lazy-init applies to custom bean definitions as well.
 			builder.setLazyInit(true);
 		}
+
+		//  调用子类重写的doParse方法解析，（自定义标签的属性类）
 		doParse(element, parserContext, builder);
 		return builder.getBeanDefinition();
 	}

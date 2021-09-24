@@ -1,18 +1,26 @@
 package com.first.xml;
 
+import lombok.Data;
+
+import java.util.logging.Logger;
+
+
 public class Person {
-	private String  username;
+
+	private static final Logger logger = Logger.getGlobal();
+
+	private String  name;
 
 	private String  password;
 
 	private Integer age;
 
-	public String getUsername() {
-		return username;
+	public String getName() {
+		return name;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getPassword() {
@@ -31,11 +39,14 @@ public class Person {
 		this.age = age;
 	}
 
+	public void hello () {
+		logger.info("Hello Person ...");
+	}
 
 	@Override
 	public String toString() {
 		return "Person{" +
-				"username='" + username + '\'' +
+				"name='" + name + '\'' +
 				", password='" + password + '\'' +
 				", age=" + age +
 				'}';

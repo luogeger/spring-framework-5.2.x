@@ -26,6 +26,23 @@ import org.springframework.context.ApplicationContextException;
 import org.springframework.lang.Nullable;
 
 /**
+ *
+ * <pre>
+ *     ApplicationContext实现的基类应该支持对refresh()多次调用，每次都创建一个新的内部 bean 工厂实例。 通常（但不一定），
+ *     这样的上下文将由一组配置位置驱动，以从中加载 bean 定义。
+ * 子类实现的唯一方法是loadBeanDefinitions ，
+ * 它在每次刷新时被调用。 一个具体的实现应该将 bean 定义加载到给定的DefaultListableBeanFactory ，
+ * 通常委托给一个或多个特定的 bean 定义读取器。
+ * 请注意，WebApplicationContexts 有一个类似的基类。
+ * org.springframework.web.context.support.AbstractRefreshableWebApplicationContext提供相同的子类化策略，
+ * 但另外预先实现了 Web 环境的所有上下文功能。 还有一种预定义的方式来接收 Web 上下文的配置位置。
+ * 这个基类的具体独立子类，以特定的 bean 定义格式读取，是ClassPathXmlApplicationContext和FileSystemXmlApplicationContext ，
+ * 它们都派生自公共的AbstractXmlApplicationContext基类；
+ * org.springframework.context.annotation.AnnotationConfigApplicationContext
+ * 支持@Configuration -annotated classes 作为 bean 定义的来源
+ * </pre>
+ *
+ *
  * Base class for {@link org.springframework.context.ApplicationContext}
  * implementations which are supposed to support multiple calls to {@link #refresh()},
  * creating a new internal bean factory instance every time.
@@ -113,25 +130,32 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
 
 
 	/**
+	 * 此实现执行此上下文的底层 bean 工厂的实际刷新，关闭先前的 bean 工厂（如果有）并为上下文生命周期的下一个阶段初始化一个新的 bean 工厂。
+	 *
 	 * This implementation performs an actual refresh of this context's underlying
 	 * bean factory, shutting down the previous bean factory (if any) and
 	 * initializing a fresh bean factory for the next phase of the context's lifecycle.
 	 */
 	@Override
 	protected final void refreshBeanFactory() throws BeansException {
+		//  如果存在Bean工厂，则销毁
 		if (hasBeanFactory()) {
 			destroyBeans();
 			closeBeanFactory();
 		}
 		try {
-			// 创建DefaultListableBeanFactory对象
+			// 创建Bean工厂，设置一些属性，工厂的默认名是 DefaultListableBeanFactory
 			DefaultListableBeanFactory beanFactory = createBeanFactory();
+
 			// 为了序列化指定id，可以从id反序列化到beanFactory对象
 			beanFactory.setSerializationId(getId());
-			// 定制beanFactory，设置相关属性，包括是否允许覆盖同名称的不同定义的对象以及循环依赖
+
+			// 定制beanFactory，设置相关属性，1、是否允许覆盖同名称的定义(BeanDefinition) 2、是否允许循环依赖
 			customizeBeanFactory(beanFactory);
+
 			// 初始化documentReader,并进行XML文件读取及解析,默认命名空间的解析，自定义标签的解析
 			loadBeanDefinitions(beanFactory);
+
 			this.beanFactory = beanFactory;
 		}
 		catch (IOException ex) {
@@ -198,6 +222,7 @@ public abstract class AbstractRefreshableApplicationContext extends AbstractAppl
 	 * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#setAllowRawInjectionDespiteWrapping
 	 */
 	protected DefaultListableBeanFactory createBeanFactory() {
+		//  如果实现了 ConfigurableApplicationContext，则返回父上下文的内部 bean 工厂； 否则，返回父上下文本身。
 		return new DefaultListableBeanFactory(getInternalParentBeanFactory());
 	}
 

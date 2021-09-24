@@ -124,6 +124,16 @@ public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContex
 	}
 
 	/**
+
+	 /**
+	 * 使用给定的父级创建一个新的 ClassPathXmlApplicationContext，从给定的 XML 文件加载定义。
+	 *
+	 * 参数：
+	 * 		configLocations – 资源位置数组
+	 * 		refresh – 是否自动刷新上下文，加载所有 bean 定义并创建所有单例。 或者，在进一步配置上下文后手动调用 refresh。
+	 * 		parent – 父上下文
+	 * 抛出： BeansException - 如果上下文创建失败
+	 *
 	 * Create a new ClassPathXmlApplicationContext with the given parent,
 	 * loading the definitions from the given XML files.
 	 * @param configLocations array of resource locations
@@ -138,9 +148,12 @@ public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContex
 			String[] configLocations, boolean refresh, @Nullable ApplicationContext parent)
 			throws BeansException {
 
+		//  设置很多属性
 		super(parent);
+		//  设置配置文件的属性值=org.springframework.context.support.AbstractRefreshableConfigApplicationContext.setConfigLocations
 		setConfigLocations(configLocations);
 		if (refresh) {
+			// org.springframework.context.support.AbstractApplicationContext.refresh
 			refresh();
 		}
 	}

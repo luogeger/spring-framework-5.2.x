@@ -9,16 +9,14 @@ sourceCompatibility = 1.8
 
 repositories {
     maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
-    maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter'}
+    maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
     mavenCentral()
 }
 
 dependencies {
     implementation project(":spring-context")
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    // https://mvnrepository.com/artifact/org.projectlombok/lombok
     compile group: 'org.projectlombok', name: 'lombok', version: '1.18.18'
-    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
     // compile group: 'org.slf4j', name: 'slf4j-api', version: '2.0.0-alpha1'
 
 

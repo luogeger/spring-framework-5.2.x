@@ -2,10 +2,14 @@ package com.first.demo;
 
 import org.springframework.stereotype.Repository;
 
+import java.util.logging.Logger;
+
 @Repository
 public class DemoBean {
 
+	private static final Logger logger = Logger.getGlobal();
+
 	public void hello () {
-		System.out.println("Hello Spring ~");
+		logger.info("Hello Spring !!!....");
 	}
 }

@@ -661,7 +661,11 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	 * @see #getBeanFactory()
 	 */
 	protected ConfigurableListableBeanFactory obtainFreshBeanFactory() {
+		// 子类必须实现此方法才能执行实际的配置加载。 该方法在任何其他初始化工作之前由refresh()调用。
+		//一个子类要么创建一个新的 bean factory 并持有对它的引用，要么返回它持有的单个 BeanFactory 实例。 在后一种情况下，如果多次刷新上下文，它通常会抛出 IllegalStateException
 		refreshBeanFactory();
+		// 子类必须在此处返回其内部 bean 工厂。 他们应该有效地实现查找，以便可以重复调用它而不会影响性能。
+		// 注意：子类在返回内部 bean 工厂之前应该检查上下文是否仍然处于活动状态。 一旦上下文关闭，内部工厂通常应被视为不可用
 		return getBeanFactory();
 	}
 
@@ -671,12 +675,16 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 	 * @param beanFactory the BeanFactory to configure
 	 */
 	protected void prepareBeanFactory(ConfigurableListableBeanFactory beanFactory) {
-		// Tell the internal bean factory to use the context's class loader etc.
+		// Tell the internal bean factory to use the context's class loader etc. 告诉内部 bean 工厂使用上下文的类加载器等。
+
+		//  类加载器
 		beanFactory.setBeanClassLoader(getClassLoader());
+		//  SPEL表达式相关
 		beanFactory.setBeanExpressionResolver(new StandardBeanExpressionResolver(beanFactory.getBeanClassLoader()));
+		// 为beanFactory添加一个默认的PropertyEditor，对bean的属性进行设置。（就是一个参数的解析工具类，把它放到一个对象里面去）
 		beanFactory.addPropertyEditorRegistrar(new ResourceEditorRegistrar(this, getEnvironment()));
 
-		// Configure the bean factory with context callbacks.
+		// Configure the bean factory with context callbacks.使用上下文回调配置 bean 工厂。
 		beanFactory.addBeanPostProcessor(new ApplicationContextAwareProcessor(this));
 		beanFactory.ignoreDependencyInterface(EnvironmentAware.class);
 		beanFactory.ignoreDependencyInterface(EmbeddedValueResolverAware.class);
@@ -685,24 +693,24 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		beanFactory.ignoreDependencyInterface(MessageSourceAware.class);
 		beanFactory.ignoreDependencyInterface(ApplicationContextAware.class);
 
-		// BeanFactory interface not registered as resolvable type in a plain factory.
-		// MessageSource registered (and found for autowiring) as a bean.
+		// BeanFactory interface not registered as resolvable type in a plain factory.【BeanFactory 接口未在普通工厂中注册为可解析类型。
+		// MessageSource registered (and found for autowiring) as a bean.【MessageSource 注册（并发现用于自动装配）作为 bean。
 		beanFactory.registerResolvableDependency(BeanFactory.class, beanFactory);
 		beanFactory.registerResolvableDependency(ResourceLoader.class, this);
 		beanFactory.registerResolvableDependency(ApplicationEventPublisher.class, this);
 		beanFactory.registerResolvableDependency(ApplicationContext.class, this);
 
-		// Register early post-processor for detecting inner beans as ApplicationListeners.
+		// Register early post-processor for detecting inner beans as ApplicationListeners.将用于检测内部 bean 的早期后处理器注册为 ApplicationListeners。
 		beanFactory.addBeanPostProcessor(new ApplicationListenerDetector(this));
 
-		// Detect a LoadTimeWeaver and prepare for weaving, if found.
+		// Detect a LoadTimeWeaver and prepare for weaving, if found.检测 LoadTimeWeaver 并准备编织（如果找到）。
 		if (beanFactory.containsBean(LOAD_TIME_WEAVER_BEAN_NAME)) {
 			beanFactory.addBeanPostProcessor(new LoadTimeWeaverAwareProcessor(beanFactory));
-			// Set a temporary ClassLoader for type matching.
+			// Set a temporary ClassLoader for type matching.为类型匹配设置一个临时的ClassLoader
 			beanFactory.setTempClassLoader(new ContextTypeMatchClassLoader(beanFactory.getBeanClassLoader()));
 		}
 
-		// Register default environment beans.
+		// Register default environment beans.注册默认环境 bean。
 		if (!beanFactory.containsLocalBean(ENVIRONMENT_BEAN_NAME)) {
 			beanFactory.registerSingleton(ENVIRONMENT_BEAN_NAME, getEnvironment());
 		}

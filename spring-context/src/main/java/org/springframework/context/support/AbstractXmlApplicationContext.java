@@ -70,7 +70,6 @@ public abstract class AbstractXmlApplicationContext extends AbstractRefreshableC
 		this.validating = validating;
 	}
 
-
 	/**
 	 * Loads the bean definitions via an XmlBeanDefinitionReader.
 	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
@@ -79,21 +78,22 @@ public abstract class AbstractXmlApplicationContext extends AbstractRefreshableC
 	 */
 	@Override
 	protected void loadBeanDefinitions(DefaultListableBeanFactory beanFactory) throws BeansException, IOException {
-		// Create a new XmlBeanDefinitionReader for the given BeanFactory.
+
 		// 创建一个xml的beanDefinitionReader，并通过回调设置到beanFactory中
 		XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanFactory);
 
-		// Configure the bean definition reader with this context's
-		// resource loading environment.
 		// 给reader对象设置环境对象， 去掉前面得this试试看？
 		beanDefinitionReader.setEnvironment(this.getEnvironment());
+
+		// 设置 ResourceLoader 以用于资源位置。 如果指定 ResourcePatternResolver，则 bean 定义阅读器将能够将资源模式解析为 Resource 数组。默认是 PathMatchingResourcePatternResolver，也能够通过 ResourcePatternResolver 接口进行资源模式解析。将此设置为null表明此 bean 定义读取器无法使用绝对资源加载。
 		beanDefinitionReader.setResourceLoader(this);
+
+		// 实体解析器
 		beanDefinitionReader.setEntityResolver(new ResourceEntityResolver(this));
 
-		// Allow a subclass to provide custom initialization of the reader,
-		// then proceed with actually loading the bean definitions.
-		//  初始化beanDefinitionReader对象，此处设置配置文件是否要进行验证
+		//  初始化beanDefinitionReader对象，此处设置配置文件是否要进行验证。适配器模式？
 		initBeanDefinitionReader(beanDefinitionReader);
+
 		// 开始完成beanDefinition的加载
 		loadBeanDefinitions(beanDefinitionReader);
 	}
@@ -127,7 +127,9 @@ public abstract class AbstractXmlApplicationContext extends AbstractRefreshableC
 		if (configResources != null) {
 			reader.loadBeanDefinitions(configResources);
 		}
-		String[] configLocations = getConfigLocations();// org/springframework/context/support/ClassPathXmlApplicationContext.java:142
+
+		//  获取配置文件的位置 org/springframework/context/support/ClassPathXmlApplicationContext.java:142
+		String[] configLocations = getConfigLocations();
 		if (configLocations != null) {
 			reader.loadBeanDefinitions(configLocations);
 		}

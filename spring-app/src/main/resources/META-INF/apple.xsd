@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://www.first.com/schema/apple"
+		xmlns:tns="http://www.first.com/schema/apple"
+		elementFormDefault="qualified">
+
+	<element name="apple">
+		<complexType>
+			<attribute name ="id" type = "string"/>
+			<attribute name ="color" type = "string"/>
+			<attribute name ="source" type = "string"/>
+		</complexType>
+	</element>
+</schema>

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
+">
 
+
+	<context:property-override/>
+<!--	<context:property-placeholder location="classpath:db.properties"/>-->
 	<bean id="person" class="com.first.xml.Person">
-		<property name="username" value="root"></property>
-		<property name="password" value="root123"></property>
-		<property name="age" value="17"></property>
+		<property name="name" value="root"/>
+		<property name="password" value="root123"/>
+		<property name="age" value="17"/>
 	</bean>
 </beans>
